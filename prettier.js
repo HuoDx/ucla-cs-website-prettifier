@@ -5,7 +5,7 @@ function setURLContentToMainContainer(url) {
     pullContentFromSrc(url).then(
         function (content) {
             document.getElementById('main-panel').innerHTML = content;
-            document.querySelectorAll('a').forEach((element) => {
+            document.getElementById('main-panel').querySelectorAll('a').forEach((element) => {
                 element.target = '';
                 element.setAttribute('onclick', `setURLContentToMainContainer('${element.href}')`);
                 element.href = '#';
@@ -15,9 +15,9 @@ function setURLContentToMainContainer(url) {
 }
 ; (async () => {
     var frame = document.querySelector('frameset');
-    if(window.location.hostname !== 'web.cs.ucla.edu') alert(`You are currently not at the CS website; please go retry after going there.`);
+    if (window.location.hostname !== 'web.cs.ucla.edu') alert(`You are currently not at the CS website; please go retry after going there.`);
     else if (frame === null) alert(`Nothing left to do: it has been prettified. `);
-    
+
     else {
         document.querySelector('head').innerHTML += ` <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
