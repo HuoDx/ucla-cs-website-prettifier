@@ -25,17 +25,17 @@ function setURLContentToMainContainer(url) {
 
         document.querySelector('head').innerHTML += `<link rel='stylesheet' href='https://huodx.github.io/CS31-website-prettifier/prettier.css'>`;
         document.querySelector('html').removeChild(frame);
-        document.querySelector('head').innerHTML += `<meta charset="UTF-8" /> \n<meta name="viewport" content="width=device-width, initial-scale=1.0" />`);
+        document.querySelector('head').innerHTML += `<meta charset="UTF-8" /> \n<meta name="viewport" content="width=device-width, initial-scale=1.0" />`;
         var body = document.createElement('body');
         var navBar = document.createElement('div');
         navBar.classList.add('nav-bar')
         navBar.innerHTML = await pullContentFromSrc('contents.html');
         var mainPanel = document.createElement('div');
         mainPanel.id = 'main-panel';
-        setURLContentToMainContainer(navBar.querySelector('a[target]').href);
-        navBar.querySelectorAll('a[target]').forEach((element) => {
+        setURLContentToMainContainer(navBar.querySelector('a').href);
+        navBar.querySelectorAll('a').forEach((element) => {
             element.target = '';
-            element.setAttribute('onclick', `setURLContentToMainContainer('${element.href}')`);
+            element.setAttribute('onclick', `javascript: setURLContentToMainContainer('${element.href}');`);
             element.href = '#';
         });
 
