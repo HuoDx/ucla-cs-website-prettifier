@@ -1,5 +1,5 @@
 async function pullContentFromSrc(url) {
-    return await (await fetch(url, {mode:'navigate'})).text()
+    return await (await fetch(url, {mode:'no-cors', referrerPolicy: 'same-origin', credentials: 'same-origin'})).text()
 }
 function setURLContentToMainContainer(url) {
     pullContentFromSrc(url).then(
