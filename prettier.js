@@ -23,7 +23,7 @@ function setURLContentToMainContainer(url) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Work+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">`;
 
-        document.querySelector('head').innerHTML += `<link rel='stylesheet' href='http://localhost/prettier.css'>`;
+        document.querySelector('head').innerHTML += `<link rel='stylesheet' href='https://huodx.github.io/CS31-website-prettifier/prettier.css'>`;
         document.querySelector('html').removeChild(frame);
         document.write(`<meta charset="UTF-8" /> \n<link rel="shortcut icon" href="/favicon.ico" /> \n<meta name="viewport" content="width=device-width, initial-scale=1.0" />`);
         var body = document.createElement('body');
