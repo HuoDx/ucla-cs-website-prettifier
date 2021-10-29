@@ -6,7 +6,7 @@ function setURLContentToMainContainer(url) {
         function (content) {
             document.getElementById('main-panel').innerHTML = content;
             document.getElementById('main-panel').querySelectorAll('a').forEach((element) => {
-                console.log(`${url}-> ${element.href}`);
+                console.log(`${url}-> ${element.getAttribute('href')}`);
                 element.target = '';
                 element.setAttribute('onclick', `setURLContentToMainContainer('${element.href}')`);
                 element.href = '#';
