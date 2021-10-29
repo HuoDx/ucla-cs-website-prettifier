@@ -2,13 +2,15 @@ async function pullContentFromSrc(url) {
     return await (await fetch(url)).text()
 }
 function setURLContentToMainContainer(url) {
+    let urlFields, parsedUrl;
     pullContentFromSrc(url).then(
         function (content) {
             document.getElementById('main-panel').innerHTML = content;
             document.getElementById('main-panel').querySelectorAll('a').forEach((element) => {
-                console.log(`${url}-> ${element.getAttribute('href')}`);
                 element.target = '';
-                element.setAttribute('onclick', `setURLContentToMainContainer('${element.href}')`);
+                urlFields = url.split('/');
+                parsedUrl = url.replace(urlFields[urlFields.length - 1], element.getAttribute('href'));
+                element.setAttribute('onclick', `setURLContentToMainContainer('${parsedUrl}')`);
                 element.href = '#';
             });
         }
