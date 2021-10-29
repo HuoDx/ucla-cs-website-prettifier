@@ -1,5 +1,10 @@
 async function pullContentFromSrc(url) {
+    try {
     return await (await fetch(url)).text()
+    } catch(e) {
+        console.warn(e);
+        window.open(url);
+    }
 }
 function setURLContentToMainContainer(url) {
     let urlFields, parsedUrl;
