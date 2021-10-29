@@ -44,6 +44,21 @@
             bottom: 16px;
             left: 16px;
         }
+
+        .mobile-only {
+            display: none;
+        }
+
+        @media (pointer: none),
+        (pointer: coarse) {
+            .computer-only {
+                display: none;
+            }
+
+            .mobile-only {
+                display: flex;
+            }
+        }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5QNSZ9Y0W"></script>
@@ -59,7 +74,7 @@
 <body>
     <div class="container">
         <h1>CS Website Prettifier</h1>
-        <div class="left-container">
+        <div class="left-container computer-only">
             <div><a class="tag"
                     onclick="javascript:alert('Do not click me; drag me to your bookmarks!');event.preventDefault();"
                     href="javascript:var s = document.createElement('script');s.src='https://huodx.github.io/CS31-website-prettifier/prettier.js';document.body.append(s);">Prettify!</a>
@@ -74,6 +89,9 @@
                 <li>Firefox: right-click in the blank space of the tab bar and check "Bookmark Toolbar".</li>
             </ul>
             <div>Watch a <a href="https://www.youtube.com/watch?v=PXKBLHoIOZk">video demo</a> about this project.</div>
+        </div>
+        <div class="mobile-only">
+            <div>Please open this page on a computer.</div>
         </div>
 
     </div>
