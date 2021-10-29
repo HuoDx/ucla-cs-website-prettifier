@@ -4,6 +4,7 @@ async function pullContentFromSrc(url) {
     } catch(e) {
         console.warn(e);
         window.open(url);
+        return '<h1>This website cannot be opened here, so I opened up a new tab for that :)</h1>'
     }
 }
 function setURLContentToMainContainer(url) {
