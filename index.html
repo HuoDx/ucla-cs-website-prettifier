@@ -22,6 +22,24 @@
             box-shadow: 0 0px 4px 1px rgb(0 0 0 / 15%);
             margin-top: 16px;
             margin-bottom: 16px;
+            max-width: 60px;
+        }
+
+        .left-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+        }
+        h1 {
+            margin: 24px;
+        }
+        h3 {
+            margin-top: 24px;
+        }
+        footer {
+            position: fixed;
+            bottom: 16px;
+            left: 16px;
         }
     </style>
 </head>
@@ -29,17 +47,26 @@
 <body>
     <div class="container">
         <h1>CS Website Prettifier</h1>
-        <div><b>Drag</b> the "Prettify!" tag below to your browser's <b>Bookmark</b> tab, and then <b>click</b> it when browsing the <a href="https://web.cs.ucla.edu/classes/fall21/cs31/#">CS31 website</a></div>
-        <a class="tag" onclick="javascript:alert('Do not click me; drag me to your bookmarks!');event.preventDefault();"
-            href="javascript:var s = document.createElement('script');s.src='https://huodx.github.io/CS31-website-prettifier/prettier.js';document.body.append(s);">Prettify!</a>
-        <h3>Turning on the bookmark tab:</h3>
-        <ul>
-            <li>Chrome: press ctrl+shift+B (cmd+shift+B on a Mac); </li>
-            <li>Firefox: right-click in the blank space of the tab bar and check "Bookmark Toolbar".</li>
-        </ul>
-        <footer>Code with &hearts; by <a href="https://huodx.github.io">Dyson Huo</a> </footer>
+        <div class="left-container">
+            <div><a class="tag"
+                    onclick="javascript:alert('Do not click me; drag me to your bookmarks!');event.preventDefault();"
+                    href="javascript:var s = document.createElement('script');s.src='https://huodx.github.io/CS31-website-prettifier/prettier.js';document.body.append(s);">Prettify!</a>
+                 ← <b>Drag</b> the "Prettify!" tag below to your browser's <b>Bookmark</b> tab, and then <b>click</b> it
+                when
+                browsing the <a href="https://web.cs.ucla.edu/classes/fall21/cs31/#">CS31 website</a>
+            </div>
+
+            <h3>Turning on the bookmark tab:</h3>
+            <ul>
+                <li>Chrome: press ctrl+shift+B (cmd+shift+B on a Mac); </li>
+                <li>Firefox: right-click in the blank space of the tab bar and check "Bookmark Toolbar".</li>
+            </ul>
+            <div>Watch a <a href="https://www.youtube.com/watch?v=PXKBLHoIOZk">video demo</a> about this project.</div>
+        </div>
+        
     </div>
-    
+    <footer>Code with &hearts; by <a href="https://huodx.github.io">Dyson Huo</a> </footer>
+
 </body>
 
 </html>
