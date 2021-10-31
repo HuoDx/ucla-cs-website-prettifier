@@ -28,9 +28,9 @@ function setURLContentToMainContainer(url) {
     else if (frame === null) alert(`Nothing left to do: it has been prettified. `);
 
     else {
-    //     document.querySelector('head').innerHTML += ` <link rel="preconnect" href="https://fonts.googleapis.com">
-    // <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    // <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Work+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">`;
+        document.querySelector('head').innerHTML += ` <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"> `;
 
         document.querySelector('head').innerHTML += `<link rel='stylesheet' href='https://huodx.github.io/CS31-website-prettifier/prettier.css'>`;
         document.querySelector('html').removeChild(frame);
