@@ -25,8 +25,15 @@ function setURLContentToMainContainer(url) {
 ; (async () => {
     var frame = document.querySelector('frameset');
     if (window.location.hostname !== 'web.cs.ucla.edu') alert(`You are currently not at the CS website; please go retry after going there.`);
-    else if (frame === null) alert(`Nothing left to do: it has been prettified. `);
-
+    else if (frame === null) {
+        if(document.querySelector('.nav-bar') !== null || document.querySelector('#PTFD') !== null) alert(`Nothing left to do: it has been prettified. `);
+        else {
+            document.querySelector('head').innerHTML += ` <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"> `;
+            document.querySelector('head').innerHTML += `<link rel='stylesheet' id='PTFD' href='https://huodx.github.io/CS31-website-prettifier/prettier-singlepage.css'>`;
+        }  
+    }
     else {
         document.querySelector('head').innerHTML += ` <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
