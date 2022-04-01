@@ -35,6 +35,7 @@ function setURLContentToMainContainer(url) {
         }  
     }
     else {
+        let navigationSource = document.querySelector('frame').src;
         document.querySelector('head').innerHTML += ` <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"> `;
@@ -45,7 +46,7 @@ function setURLContentToMainContainer(url) {
         var body = document.createElement('body');
         var navBar = document.createElement('div');
         navBar.classList.add('nav-bar')
-        let navigationSource = document.querySelector('frame').src;
+        
         navBar.innerHTML = await pullContentFromSrc(navigationSource);
         var mainPanel = document.createElement('div');
         mainPanel.id = 'main-panel';
