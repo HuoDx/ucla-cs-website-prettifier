@@ -45,7 +45,8 @@ function setURLContentToMainContainer(url) {
         var body = document.createElement('body');
         var navBar = document.createElement('div');
         navBar.classList.add('nav-bar')
-        navBar.innerHTML = await pullContentFromSrc('contents.html');
+        let navigationSource = document.querySelector('frame').src;
+        navBar.innerHTML = await pullContentFromSrc(navigationSource);
         var mainPanel = document.createElement('div');
         mainPanel.id = 'main-panel';
         setURLContentToMainContainer(navBar.querySelector('a').href);
