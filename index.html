@@ -53,6 +53,20 @@
                 display: flex;
             }
         }
+        img {
+            margin: 8px;
+            border-radius: 8px;
+            padding: 4px;
+            box-shadow: 0 0px 4px 1px rgb(0 0 0 / 15%);
+        }
+        .showcase {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-size: larger;
+            margin-top: 24px;
+        }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5QNSZ9Y0W"></script>
@@ -69,12 +83,19 @@
     <div class="container">
         <h1>CS Website Prettifier</h1>
         <div class="left-container computer-only">
-            <div><a class="tag hdx-button"
+            <div style="line-height: 2.2">
+                <a class="tag hdx-button"
                     onclick="javascript:alert('Do not click me; drag me to your bookmarks!');event.preventDefault();"
                     href="javascript:var s = document.createElement('script');s.src='https://prettify.cs.huodx.io/prettier.js';document.body.append(s);">Prettify!</a>
                 ← <b>Drag</b> the "Prettify!" tag below to your browser's <b>Bookmark</b> tab, and then <b>click</b> it
                 when
                 browsing some of the UCLA CS plain websites.
+            </div>
+            <div class="showcase">
+                It turns
+                <img src="/before.png" alt="before" width="250px">
+                into
+                <img src="/after.png" alt="after" width="250px">
             </div>
         
             <h3>Turning on the bookmark tab:</h3>
