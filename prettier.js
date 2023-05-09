@@ -31,7 +31,7 @@ function setURLContentToMainContainer(url) {
             document.querySelector('head').innerHTML += ` <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"> `;
-            document.querySelector('head').innerHTML += `<link rel='stylesheet' id='PTFD' href='https://huodx.github.io/CS31-website-prettifier/prettier-singlepage.css'>`;
+            document.querySelector('head').innerHTML += `<link rel='stylesheet' id='PTFD' href='https://prettify.cs.huodx.io/prettier-singlepage.css'>`;
         }  
     }
     else {
@@ -40,7 +40,7 @@ function setURLContentToMainContainer(url) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"> `;
 
-        document.querySelector('head').innerHTML += `<link rel='stylesheet' href='https://huodx.github.io/CS31-website-prettifier/prettier.css'>`;
+        document.querySelector('head').innerHTML += `<link rel='stylesheet' href='https://prettify.cs.huodx.io/prettier.css'>`;
         document.querySelector('html').removeChild(frame);
         document.querySelector('head').innerHTML += `<meta charset="UTF-8" /> \n<meta name="viewport" content="width=device-width, initial-scale=1.0" />`;
         var body = document.createElement('body');
